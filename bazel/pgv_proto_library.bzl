@@ -14,7 +14,7 @@ def pgv_go_proto_library(name, proto = None, deps = [], **kwargs):
     go_proto_library(
         name = name,
         proto = proto,
-        deps = ["//validate:go_default_library"] + deps,
+        deps = ["@com_envoyproxy_protoc_gen_validate//validate:go_default_library"] + deps,
         compilers = ["@io_bazel_rules_go//proto:go_proto", "pgv_plugin_go"],
         visibility = ["//visibility:public"],
         **kwargs
@@ -32,7 +32,7 @@ def pgv_gogo_proto_library(name, proto = None, deps = [], **kwargs):
     go_proto_library(
         name = name,
         proto = proto,
-        deps = ["//validate:go_default_library"] + deps,
+        deps = ["@com_envoyproxy_protoc_gen_validate//validate:go_default_library"] + deps,
         compilers = ["@io_bazel_rules_go//proto:gogo_proto", "pgv_plugin_gogo"],
         visibility = ["//visibility:public"],
         **kwargs
