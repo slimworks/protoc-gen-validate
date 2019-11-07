@@ -7,7 +7,7 @@ def pgv_go_proto_library(name, proto = None, deps = [], **kwargs):
         name = "pgv_plugin_go",
         suffix = ".pb.validate.go",
         valid_archive = False,
-        plugin = "//:protoc-gen-validate",
+        plugin = "@com_envoyproxy_protoc_gen_validate//:protoc-gen-validate",
         options = ["lang=go"],
     )
 
@@ -25,7 +25,7 @@ def pgv_gogo_proto_library(name, proto = None, deps = [], **kwargs):
         name = "pgv_plugin_gogo",
         suffix = ".pb.validate.go",
         valid_archive = False,
-        plugin = "//:protoc-gen-validate",
+        plugin = "@com_envoyproxy_protoc_gen_validate//:protoc-gen-validate",
         options = ["lang=gogo"],
     )
 
